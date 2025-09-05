@@ -5,35 +5,86 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Chainraise</title>
 	<script src="https://cdn.tailwindcss.com"></script>
+
+	<meta name="description" content="ChainRaise - Decentralized fundraising platform on Solana. Raise funds transparently with blockchain.">
+	<meta name="keywords" content="Blockchain, Fundraising, Solana, Web3, ChainRaise, Crypto">
+
+
+	<style>
+		html { scroll-behavior: smooth; }
+	</style>
+
 </head>
 <body class="bg-gray-900 text-white font-sans">
 
-<header class="py-4 px-6 md:px-12 flex justify-between items-center">
-	<div class="flex items-center space-x-4">
-		<span class="text-2xl font-bold text-indigo-400">Chainraise</span>
-	</div>
-	<nav class="hidden md:flex space-x-8">
-		<a href="#about" class="hover:text-indigo-400 transition-colors">About</a>
-		<a href="#features" class="hover:text-indigo-600">Features</a>
-		<a href="#products" class="hover:text-indigo-600">Products</a>
-		<a href="#how-it-works" class="hover:text-indigo-600">How it Works</a>
-		<a href="#contact" class="hover:text-indigo-600">Contact</a>
-	</nav>
-	<button
-			class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-full transition-colors">Download App
+<header class="py-4 px-6 md:px-12 flex justify-between items-center sticky top-0 bg-gray-900 z-50 shadow-md">
+
+	<button class="md:hidden focus:outline-none" id="menu-btn">
+		☰
 	</button>
+	<!-- Mobile Nav -->
+	<nav id="mobile-menu"
+	     class="absolute left-0 top-full w-full max-h-0 overflow-hidden
+            transition-all duration-500 ease-in-out flex-col space-y-4
+            px-6 pb-4 bg-gray-900/95 md:hidden opacity-0 z-40 shadow-lg">
+		<a href="#about" class="menu-link hover:text-green-400 block opacity-0 translate-y-2 transition-all duration-300">About</a>
+		<a href="#features" class="menu-link hover:text-green-400 block opacity-0 translate-y-2 transition-all duration-300">Features</a>
+		<a href="#products" class="menu-link hover:text-green-400 block opacity-0 translate-y-2 transition-all duration-300">Products</a>
+		<a href="#how-it-works" class="menu-link hover:text-green-400 block opacity-0 translate-y-2 transition-all duration-300">How it Works</a>
+		<a href="#contact" class="menu-link hover:text-green-400 block opacity-0 translate-y-2 transition-all duration-300">Contact</a>
+		<a href="#download"
+		   class="menu-link bg-green-600 hover:bg-indigo-500 text-white py-2 px-4 rounded-lg text-center block opacity-0 translate-y-2 transition-all duration-300">Download App</a>
+	</nav>
+
+
+
+
+	<div class="flex items-center space-x-4">
+		<span class="text-2xl font-bold text-green-400">ChainRaise</span>
+	</div>
+
+	<!-- Desktop Nav -->
+	<nav class="hidden md:flex space-x-8">
+		<a href="#about" class="hover:text-green-400 transition-colors">About</a>
+		<a href="#features" class="hover:text-green-400">Features</a>
+		<a href="#products" class="hover:text-green-400">Products</a>
+		<a href="#how-it-works" class="hover:text-green-400">How it Works</a>
+		<a href="#contact" class="hover:text-green-400">Contact</a>
+	</nav>
+
+
+
+	<!-- CTA Button -->
+	<button class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-full transition-colors hidden md:block">
+		Download App
+	</button>
+
 </header>
+
+
 
 <main class="container mx-auto px-6 md:px-12">
 
-	<section id="hero" class="text-center py-20 md:py-32">
+
+
+	<!--<section id="hero" class="text-center py-20 md:py-32">-->
+
+	<section id="hero" class="text-center py-20 md:py-32 ">
 		<div class="container mx-auto px-6 text-center">
 			<h2 class="text-4xl md:text-6xl font-extrabold mb-6">Raise Funds on the Blockchain with ChainRaise</h2>
-			<p class="max-w-2xl mx-auto text-lg text-gray-400 mb-8">Empowering communities and creators through
+
+			<p class="max-w-2xl mx-auto text-lg text-gray mb-8">Empowering communities and creators through
 				decentralized, transparent, and secure fundraising.</p>
 			<div class="space-x-4">
-				<a href="#get-started" class="bg-white text-indigo-600 font-semibold px-6 py-3 rounded-lg shadow hover:bg-gray-100">Start Fundraising</a>
-				<a href="#features" class="bg-transparent border border-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600">Learn More</a>
+
+				<a href="#get-started" class="bg-gradient-to-r from-green-400 to-green-600 text-white font-semibold px-6 py-3 rounded-lg shadow hover:opacity-90">
+					Start Fundraising
+				</a>
+				<a href="#features" class="border border-white px-6 py-3 rounded-lg font-semibold text-white hover:bg-white hover:text-green-600">
+					Learn More
+				</a>
+
+
 			</div>
 		</div>
 	</section>
@@ -42,7 +93,7 @@
 		<div class="container mx-auto px-6 text-center">
 			<h3 class="text-3xl font-bold mb-6">How ChainRaise Works</h3>
 
-			<div class="grid md:grid-cols-4 gap-8 text-center">
+			<div class="grid md:grid-cols-5 gap-8 text-center">
 				<div class="p-6 bg-gray-900 shadow rounded-lg">
 					<div class="text-4xl font-bold mb-2 text-indigo-400">1</div>
 					<h4 class="font-semibold text-lg mb-2">Sign Up</h4>
@@ -65,34 +116,79 @@
 					<h4 class="font-semibold text-lg mb-2">Receive Funds</h4>
 					<p class="text-gray-400">Receive donations directly to your Solana wallet with full transparency.</p>
 				</div>
+
+				<div class="p-6 bg-gray-900 shadow rounded-lg">
+					<div class="text-4xl font-bold mb-2 text-indigo-400">5</div>
+					<h4 class="font-semibold text-lg mb-2">Bank Withdrawal</h4>
+					<p class="text-gray-400">withdraw funds directly into your Naira Account.</p>
+				</div>
 			</div>
 		</div>
 	</section>
 
-	<section id="metrics" class="bg-gray-800 p-8 rounded-lg shadow-lg mb-16">
-		<h2 class="text-3xl font-bold mb-6 text-center">Fundraising Progress</h2>
-		<div class="flex flex-col md:flex-row justify-around items-center space-y-6 md:space-y-0">
-			<div class="text-center">
-				<p class="text-4xl font-bold text-green-400">$1,500,000</p>
-				<p class="text-gray-400">Total Raised</p>
+	<section id="metrics" class="relative py-20 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900">
+		<div class="container mx-auto px-6">
+			<h2 class="text-4xl font-extrabold mb-12 text-center text-white">Transparent Fundraising Progress</h2>
+
+			<!-- Stats Grid -->
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+
+				<!-- Total Raised -->
+				<!-- Total Raised -->
+				<div class="p-6 rounded-2xl bg-white/10 backdrop-blur-lg shadow-lg">
+					<div class="text-5xl font-bold text-green-400">12,500 SOL</div>
+					<p class="mt-2 text-gray-300">Total Raised</p>
+				</div>
+
+				<!-- Progress -->
+				<div class="p-6 rounded-2xl bg-white/10 backdrop-blur-lg shadow-lg">
+					<div class="text-5xl font-bold text-teal-400">75%</div>
+					<p class="mt-2 text-gray-300">Donation Progress</p>
+				</div>
+
+				<!-- Time Remaining -->
+				<div class="p-6 rounded-2xl bg-white/10 backdrop-blur-lg shadow-lg">
+					<div class="text-5xl font-bold text-purple-400">12d 5h 30m</div>
+					<p class="mt-2 text-gray-300">Time Remaining</p>
+				</div>
+
 			</div>
-			<div class="text-center">
-				<p class="text-4xl font-bold text-yellow-400">75%</p>
-				<p class="text-gray-400">Progress Towards Goal</p>
+
+			<!-- Animated Progress Bar -->
+			<div class="w-full bg-gray-700 rounded-full h-5 mt-12 overflow-hidden">
+				<div class="bg-gradient-to-r from-green-400 to-green-600 h-5 rounded-full animate-progress"></div>
 			</div>
-			<div class="text-center">
-				<p class="text-4xl font-bold text-red-400">12d 05h 30m</p>
-				<p class="text-gray-400">Time Remaining</p>
-			</div>
-		</div>
-		<div class="w-full bg-gray-700 rounded-full h-4 mt-8">
-			<div class="bg-green-500 h-4 rounded-full" style="width: 75%;"></div>
 		</div>
 	</section>
+
+	<!-- Tailwind + Custom Animation -->
+	<style>
+		@keyframes grow {
+			from { width: 0%; }
+			to { width: 75%; } /* same as percentage */
+			}
+		.animate-progress {
+			animation: grow 2s ease-out forwards;
+			}
+	</style>
+
+
+	<!-- Tailwind + Custom Animation -->
+	<style>
+		@keyframes grow {
+			from { width: 0%; }
+			to { width: 75%; }
+			}
+		.animate-progress {
+			animation: grow 2s ease-out forwards;
+			}
+	</style>
+
 
 	<section id="features" class="py-20">
 		<div class="container mx-auto px-6 text-center">
 			<h3 class="text-3xl font-bold mb-12">Why Choose ChainRaise?</h3>
+
 			<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
 				<div class="p-6 bg-gray-800 shadow rounded-lg text-white">
 					<h4 class="font-semibold text-lg mb-2">Secure Wallet Integration</h4>
@@ -110,6 +206,16 @@
 					<h4 class="font-semibold text-lg mb-2">On-Chain Asset Management</h4>
 					<p class="text-gray-400">Automate capital raising processes and manage assets on the blockchain.</p>
 				</div>
+
+				<div class="p-6 bg-gray-800 shadow rounded-lg text-white">
+					<h4 class="font-semibold text-lg mb-2">Swap Other Coin</h4>
+					<p class="text-gray-400">Receive and swap other coins easily on ChainRaise.</p>
+				</div>
+
+				<div class="p-6 bg-gray-800 shadow rounded-lg text-white">
+					<h4 class="font-semibold text-lg mb-2">NFT</h4>
+					<p class="text-gray-400">NFT's </p>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -119,11 +225,13 @@
 			<h3 class="text-3xl font-bold mb-12">Products & Solutions</h3>
 			<div class="grid md:grid-cols-2 gap-8">
 				<div class="p-6 bg-gray-900 shadow rounded-lg text-white">
-					<h4 class="font-semibold text-xl mb-2 text-indigo-400">Equity Crowdfunding</h4>
+
+					<h4 class="font-semibold text-xl mb-2 text-green-400">Equity Crowdfunding</h4>
+
 					<p class="text-gray-400">Raise capital through compliant Regulation A+ and Regulation D offerings. We provide the tools to automate the process, grow your investor pool, and build aligned interests.</p>
 				</div>
 				<div class="p-6 bg-gray-900 shadow rounded-lg text-white">
-					<h4 class="font-semibold text-xl mb-2 text-indigo-400">Tokenized Assets</h4>
+					<h4 class="font-semibold text-xl mb-2 text-green-400">Tokenized Assets</h4>
 					<p class="text-gray-400">Tokenize your company's equity or other assets on the blockchain for secure, fractional ownership and potential for liquidity.</p>
 				</div>
 			</div>
@@ -142,7 +250,7 @@
 			<br/>
 
 			<p class="max-w-3xl mx-auto text-lg text-gray-200">
-				Founded by Solomon Iroegbu, ChainRaise is a premier capital raising platform that connects qualified
+				ChainRaise is a premier capital raising platform that connects qualified
 				investors worldwide with progressive companies. We are committed to revolutionizing how startups are
 				funded by providing an innovative solution for those wanting to invest in Web3.0, real estate, and other
 				startup businesses. Our goal is to connect any type of investor to a diverse range of opportunities,
@@ -163,9 +271,53 @@
 
 </main>
 
+
 <footer class="text-center py-8 text-gray-500">
-	<p>&copy; 2025 Chainraise. All Rights Reserved.</p>
+	<p>&copy; 2025 ChainRaise. All Rights Reserved.</p>
+	<div class="mt-4 space-x-4">
+		<a href="#" class="hover:text-green-400">Twitter</a>
+		<a href="#" class="hover:text-green-400">LinkedIn</a>
+		<a href="#" class="hover:text-green-400">GitHub</a>
+
+
+	</div>
 </footer>
+<!-- SCRIPT: Mobile Menu Toggle -->
+<script>
+	const menuBtn = document.getElementById('menu-btn');
+	const mobileMenu = document.getElementById('mobile-menu');
+	const menuLinks = document.querySelectorAll('.menu-link');
+	let isOpen = false;
+
+	menuBtn.addEventListener('click', () => {
+		isOpen = !isOpen;
+
+	if (isOpen) {
+		// Expand dropdown
+		mobileMenu.classList.remove('max-h-0', 'opacity-0');
+		mobileMenu.classList.add('max-h-[500px]', 'opacity-100');
+
+		// Animate links in staggered
+		menuLinks.forEach((link, i) => {
+			setTimeout(() => {
+			link.classList.remove('opacity-0', 'translate-y-2');
+			link.classList.add('opacity-100', 'translate-y-0');
+		}, i * 100); // 100ms delay per link
+	});
+	} else {
+		// Collapse dropdown
+		mobileMenu.classList.add('max-h-0', 'opacity-0');
+		mobileMenu.classList.remove('max-h-[500px]', 'opacity-100');
+
+		// Reset links immediately
+		menuLinks.forEach((link) => {
+			link.classList.add('opacity-0', 'translate-y-2');
+		link.classList.remove('opacity-100', 'translate-y-0');
+	});
+	}
+	});
+</script>
+
 
 </body>
 </html>
