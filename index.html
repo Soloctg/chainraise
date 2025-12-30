@@ -86,26 +86,43 @@
 
 
 	<!--<section id="hero" class="text-center py-20 md:py-32">-->
+	<section id="hero" class="text-center py-16 md:py-32">
+  <div class="container mx-auto px-6">
+    <h2 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
+      Raise Funds on the Blockchain with <span class="text-green-400">Irogon</span>
+    </h2>
 
-	<section id="hero" class="text-center py-20 md:py-32 ">
-		<div class="container mx-auto px-6 text-center">
-			<h2 class="text-4xl md:text-6xl font-extrabold mb-6">Raise Funds on the Blockchain with Irogon</h2>
+    <p class="max-w-2xl mx-auto text-lg md:text-xl text-gray-300 mb-10 md:mb-12">
+      Empowering communities and creators through decentralized, transparent, and secure fundraising.
+    </p>
 
-			<p class="max-w-2xl mx-auto text-lg text-gray mb-8">Empowering communities and creators through
-				decentralized, transparent, and secure fundraising.</p>
-			<div class="space-x-4">
+    <!-- Super small buttons on mobile, normal on desktop -->
+    <div class="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center">
+      
+      <!-- Primary Button -->
+      <a href="#get-started" 
+         class="w-full sm:w-auto bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 
+                text-white font-bold rounded-md shadow-md transition-all duration-200
+                /* Mobile: tiny */ 
+                px-5 py-2 text-xs 
+                /* Tablet & Desktop: normal size */
+                md:px-7 md:py-3 md:text-base">
+        Start Fundraising
+      </a>
 
-				<a href="#get-started" class="bg-gradient-to-r from-green-400 to-green-600 text-white font-semibold px-6 py-3 rounded-lg shadow hover:opacity-90">
-					Start Fundraising
-				</a>
-				<a href="#features" class="border border-white px-6 py-3 rounded-lg font-semibold text-white hover:bg-white hover:text-green-600">
-					Learn More
-				</a>
-
-
-			</div>
-		</div>
-	</section>
+      <!-- Secondary Button -->
+      <a href="#features" 
+         class="w-full sm:w-auto border border-gray-500 text-gray-300 hover:border-green-500 hover:text-green-400 
+                font-medium rounded-md transition-all duration-200
+                /* Mobile: tiny */
+                px-5 py-2 text-xs
+                /* Tablet & Desktop: normal */
+                md:px-7 md:py-3 md:text-base">
+        Learn More
+      </a>
+    </div>
+  </div>
+</section>
 
 	<section id="how-it-works" class="bg-[#0f2e14]/50 py-20">
 		<div class="container mx-auto px-6 text-center">
